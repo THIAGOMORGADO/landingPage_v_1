@@ -6,6 +6,7 @@ import { useState } from "react";
 import Person from '../../public/person.jpg'
 import Image from "next/image";
 import FrontEndItem from "@/components/FrontEndItem";
+import {ButtonInstagram, ButtonWhatsapp } from "@/components/Button";
 
 
 
@@ -107,7 +108,8 @@ export default function Home() {
       <section id="projeto" className="container mx-auto " >
         <main className=" 
           w-full 
-          p-10 flex 
+          p-10 
+          flex 
           sm:items-center 
           sm:justify-center 
           place-items-center
@@ -167,7 +169,87 @@ export default function Home() {
        
       </section>
      
+      <section className="container mx-auto bg-green-900-">
+        
+        <div className=" 
+        flex  
+        w-full 
+        flex-col 
+        sm:flex-row
+        
+        ">
+        
+          <div className="
+          sm:flex-col
+          sm:items-start
+         
+          w-[100%] 
+          sm:w-[50%]
+          p-10 
+          flex 
+          flex-col 
+          items-center
+          ">
+            
+            <div className="">
+           
+            <h2 className="
+              font-bold mt-5 
+              text-2xl 
+              text-white 
+              border-b-2
+              rounded-r-sm 
+              rounded-l-sm 
+              hover:border-green-600
+              transition: ease-in
+              duration-500
+              mb-10
+            ">Informacoes de contato</h2>
+            
+              <h1 className="text-2xl text-white font-bold">Nome: Thiago Morgado</h1>
+              <p className="text-lg text-white font-bold ">email: thiago.n.morgado@gmail.com</p>
 
+            </div>
+            
+          </div>
+
+          <div className="
+          sm:flex-col
+          sm:items-center
+          sm:w-[50%]
+          sm:justify-center
+         
+          w-[100%] 
+          flex 
+          flex-col 
+          items-center
+          p-10
+          ">
+            <h1 className="
+              font-bold mt-5 
+              text-2xl 
+              text-white 
+              border-b-2
+              rounded-r-sm 
+              rounded-l-sm 
+              hover:border-green-600
+              transition: ease-in
+              duration-500
+              mb-10
+            ">Rede Sociais</h1>
+            <div className="flex gap-10 mt-10">
+            <ButtonWhatsapp size="30" color="green" href='/' />
+            <ButtonInstagram size="30" color="green" href="/" />
+            
+            </div>
+            
+          </div> 
+          
+        </div>
+      </section>
+
+
+    
 
     </div>
   );
