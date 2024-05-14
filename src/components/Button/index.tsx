@@ -25,6 +25,12 @@ function ButtonInstagram({size, color, href}:IconProps) {
   )
 }
 
+function SubmitButton({size, color, href}:IconProps) {
+  return(
+    <a href="">
+    <FaInstagram  size={size} color={color} />
+   </a>
+  )
+}
 
-
-export  {ButtonWhatsapp, ButtonInstagram}
+export  {ButtonWhatsapp, ButtonInstagram, SubmitButton}

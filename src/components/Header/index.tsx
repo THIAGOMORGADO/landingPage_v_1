@@ -13,10 +13,6 @@ type headerProps = {
 
 const Header = ({title} : headerProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
   return(
     <header className="bg-green-600 w-full h-[3rem] flex items-center px-5 ">
       <div className="container mx-aut flex items-center justify-between">

@@ -6,7 +6,7 @@ import { useState } from "react";
 import Person from '../../public/person.jpg'
 import Image from "next/image";
 import FrontEndItem from "@/components/FrontEndItem";
-import {ButtonInstagram, ButtonWhatsapp } from "@/components/Button";
+import {ButtonInstagram, ButtonWhatsapp, SubmitButton } from "@/components/Button";
 
 
 
@@ -63,8 +63,6 @@ export default function Home() {
           
           ">Ultimos Projetos</p>
         </div>
-        
-
         <main className="w-full flex flex-col ">
           <div className="
             flex
@@ -99,10 +97,6 @@ export default function Home() {
 
           </div>
         </main>
-
-     
-
-
       </section>
         
       <section id="projeto" className="container mx-auto " >
@@ -160,25 +154,102 @@ export default function Home() {
                   flex-1
                   bg-red-300
                   mt-10
+                  mb-20
                   sm:m-0
                   "
                 />
               </div>  
             </div>
-        </main>
+
+            <div className="
+                font-bold mt-5 
+                text-2xl 
+                text-white 
+                border-b-2
+                rounded-r-sm 
+                rounded-l-sm 
+                hover:border-green-600
+                transition: ease-in
+                duration-500
+                
+              ">
+                <h3>Mande um menssagem</h3>
+
+                <div className="flex flex-col">
+                  <form action="" className="flex flex-col w-full mt-10 mb-10">
+                    <input type="Nome" placeholder="Digite seu nome" className="mb-10  rounded-md bg-zinc-700 text-sm p-[1rem]"/>
+                    <input type="phone" placeholder="informe seu numero" className="mb-10  rounded-md bg-zinc-700 text-sm p-[1rem]"/>
+                  
+                    <input type="phone" placeholder="informe seu e-mail" className="mb-10  rounded-md bg-zinc-700 text-sm p-[1rem]" />
+                  <div className="flex justify-center items-center">
+                    <button 
+                      type="submit" 
+                      className="
+                      bg-green-600 
+                      w-[80%] 
+                      rounded-md 
+                      hover:bg-green-700"
+                      >Enviar dados
+                    </button>
+                  </div>
+
+                  </form>
+                </div>
+              </div>
+                
+
+
+              <div className="
+                container 
+                mx-auto 
+                p-10 
+                flex-col
+                flex 
+                items-center 
+                justify-center 
+                rounded-lg
+                ">
+                   <p className="
+                font-bold mt-5 
+                text-2xl 
+                text-white 
+                border-b-2
+                rounded-r-sm 
+                rounded-l-sm 
+                hover:border-green-600
+                transition: ease-in
+                duration-500
+                mb-10
+              ">+ de 400 clientes satisfeitos</p>
+                <div className="flex">
+                    <ol className="sm:flex sm:gap-2  text-white text-lg font-bold">
+                      <li className="p-10">Sistemas Web</li>
+                      <li className="p-10">Aplicativos Mobile</li>
+                      <li className="p-10">iOS / Android</li>
+                      <li className="p-10">Sites Institucionais</li>
+                    </ol>
+                </div>
+                 
+              </div>
+            </main>
        
       </section>
      
-      <section className="container mx-auto bg-green-900-">
+      <section className="flex bg-zinc-700">
         
         <div className=" 
         flex  
-        w-full 
-        flex-col 
+        justify-center
+        items-center
+        flex-col
+      
+        container
+        mx-auto 
         sm:flex-row
-        
+        bg-zinc-700
         ">
         
+        <div className="flex  flex-1 sm:flex-row flex-col">
           <div className="
           sm:flex-col
           sm:items-start
@@ -187,30 +258,28 @@ export default function Home() {
           sm:w-[50%]
           p-10 
           flex 
-          flex-col 
+          flex-row 
           items-center
           ">
             
-            <div className="">
-           
-            <h2 className="
-              font-bold mt-5 
-              text-2xl 
-              text-white 
-              border-b-2
-              rounded-r-sm 
-              rounded-l-sm 
-              hover:border-green-600
-              transition: ease-in
-              duration-500
-              mb-10
-            ">Informacoes de contato</h2>
-            
-              <h1 className="text-2xl text-white font-bold">Nome: Thiago Morgado</h1>
-              <p className="text-lg text-white font-bold ">email: thiago.n.morgado@gmail.com</p>
-
+          <div className="">
+              <div className="">
+                <h2 className="
+                  font-bold mt-5 
+                  text-2xl 
+                  text-white 
+                  border-b-2
+                  rounded-r-sm 
+                  rounded-l-sm 
+                  hover:border-green-600
+                  transition: ease-in
+                  duration-500
+                  mb-10
+                ">Informacoes de contato</h2>
+                <h1 className="text-2xl text-white font-bold">Nome: Thiago Morgado</h1>
+                <p className="text-lg text-white font-bold ">email: thiago.n.morgado@gmail.com</p>
+              </div>
             </div>
-            
           </div>
 
           <div className="
@@ -235,22 +304,19 @@ export default function Home() {
               hover:border-green-600
               transition: ease-in
               duration-500
-              mb-10
+              
             ">Rede Sociais</h1>
-            <div className="flex gap-10 mt-10">
+            <div className="flex gap-10 mt-5">
             <ButtonWhatsapp size="30" color="green" href='/' />
             <ButtonInstagram size="30" color="green" href="/" />
             
             </div>
             
           </div> 
-          
+        </div>
+    
         </div>
       </section>
-
-
-    
-
     </div>
   );
 }
