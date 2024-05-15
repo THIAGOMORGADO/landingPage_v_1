@@ -1,45 +1,20 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 import DropDownMenuLink from "@/components/DropDownMenuLink";
 import Header from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { useState } from "react";
+
 import Person from '../../public/person.jpg'
 import Image from "next/image";
-import FrontEndItem from "@/components/FrontEndItem";
+
 import {ButtonInstagram, ButtonWhatsapp, SubmitButton } from "@/components/Button";
+import { Forms } from "@/components/Forms";
 
-
+import DashBoardImg from '../assets/img/dashboard.webp'
+import App from '../assets/img/app_ios_android_2.90c671a5737e60247bf4.png'
+import { FaAndroid, FaApple } from "react-icons/fa";
 
 export default function Home() {
-  const [menuAberto, setMenuAberto] = useState(false);
-  const [frontEndData, setFrontEndData] = useState([
-    {
-      id: 1,
-      title: "Front-end",
-      subTitle: "Front-end",
-      srcImg: Person,
-      link: "/",
-      linkTitle: "http://localhost"
-    },
-    {
-      id: 2,
-      title: "Sistema de barbearia",
-      subTitle: "Desevovemos um site",
-      srcImg: Person,
-      link: "/",
-      linkTitle: "http://localhost"
-    },
-    {
-      id: 2,
-      title: "Sistema de barbearia",
-      subTitle: "Desevovemos um site",
-      srcImg: Person,
-      link: "/",
-      linkTitle: "http://localhost"
-    },
-    
-    
-  ])
   return (
     <div className="bg-zinc-800 h-full">
       <Header title="Blog" />
@@ -50,26 +25,14 @@ export default function Home() {
 
       <section id="projeto" className="container mx-auto">
         <div className="flex items-center justify-center mt-5 sm:gap-10">
-          <p className="
-          font-bold mt-5 
-          text-2xl 
-          text-white 
-          border-b-2
-          rounded-r-sm 
-          rounded-l-sm 
-          hover:border-green-600
-          transition: ease-in
-          duration-500
           
-          ">Ultimos Projetos</p>
         </div>
         <main className="w-full flex flex-col ">
           <div className="
             flex
             gap-5
             flex-col
-              
-              sm:flex-row
+            sm:flex-row
             p-10
             items-center justify-center
             w-[100%]
@@ -78,22 +41,84 @@ export default function Home() {
             sm:gap-16  
           
               ">
-            {
-              frontEndData.map((item) => {
-                return (
-                  <FrontEndItem
-                    key={item.id}
-                    srcImg={item.srcImg}
-                    title={item.title}
-                    subTitle={item.subTitle}
-                    link={item.link}
-                    linkTitle={item.linkTitle}
-                  />
-                );
-              })
-            }
-
+           <div className="sm:flex sm:gap-20 items-center justify-center flex-col">
+           
+            <div className="flex sm:gap-20 sm:flex-row flex-col mb-10 items-center">
+              <Image src={DashBoardImg}  alt="" className="rounded-md sm:w-[40%] sm:h-[20%]"/>
             
+              <div className="">
+              <h1 className="sm:text-2xl sm:font-bold text-white mt-5"><span className="text-green-700">DashBoards</span> Customizados</h1>
+                <p className="text-white font-semibold mt-3 mb-3">Dashboards integrados com sua aplicação ou App Mobile</p> 
+                <div className="sm:flex gap-10 ">
+                  <div className="text-white mb-10">
+                    <ol className="sm:ml-0  ml-4">
+                      <li>Autenticação</li>
+                      <li>Administração de Vendedores</li>
+                      <li>Administração de Clientes</li>
+                      <li>Métodos de Pagamento</li>
+                      <li>Carrinho</li>
+                    </ol>  
+                  </div>
+                  <div className="text-white">
+                    <ol className="ml-4 sm:ml-0">
+                      <li>Sys Orçamentos/ Pedidos</li>
+                      <li>Vitrine de Produtos</li>
+                      <li>UpLoad e Storage Files</li>
+                      <li>Automação de Contratos</li>
+                      <li>Pedidos em Tempo Real</li>
+                    </ol>  
+                  </div>
+                </div>
+                
+                <p className="sm:mt-0 mt-5 text-1xl font-bold text-white">Precisa de uma solução customizada para sua Empresa?</p>
+                <a href="#" className="flex item-center justify-center gap-2  mt-5 border-green-500  p-5  bg-zinc-700 w-[40%] rounded-md">
+                  <p className="text-green-700 font-bold">Dashboard </p>
+                  <p className="text-white font-medium"> App</p> 
+                </a>
+              </div> 
+            </div>
+           
+
+            <div className="flex sm:gap-20 sm:flex-row-reverse flex-col mb-10 items-center">
+              <Image src={App}  alt="" className="rounded-md sm:w-[40%] sm:h-[20%]"/>
+            
+              <div className="">
+              <h1 className="sm:text-2xl sm:font-bold text-white mt-5"><span className="text-green-700">Aplicativos </span> iOS/Android</h1>
+                <p className="text-white font-semibold mt-3 mb-3">Já desenvolvemos muitos aplicativos com diversas finalidades</p> 
+                <div className="sm:flex gap-20 ">
+                  <div className="text-white mb-10">
+                    <ol className="sm:ml-0  ml-4">
+                      <li>Geolocalição</li>
+                      <li>Logística</li>
+                      <li>Meteorologia</li>
+                      <li>E-commerce</li>
+                      <li>Gameficação</li>
+                    </ol>  
+                  </div>
+                  <div className="text-white">
+                    <ol className="ml-4 sm:ml-0">
+                      <li>Orcamentos</li>
+                      <li>Vitrine de Produtos</li>
+                    </ol>  
+                  </div>
+                </div>
+                
+                <p className="sm:mt-0 mt-5 text-1xl font-bold text-white flex items-center gap-2">App's cross-plataform... <span><FaApple className="w-[20px] h-[20px]"/></span> | <span> <FaAndroid className="w-[20px] h-[20px]"/></span> </p>
+                <a href="#" className="flex item-center justify-center gap-2  mt-5 border-green-500  p-5  bg-zinc-700 w-[40%] rounded-md">
+                  <p className="text-green-700 font-bold">Dashboard </p>
+                  <p className="text-white font-medium"> App</p> 
+                </a>
+              </div> 
+            </div>
+
+       
+              
+
+               
+           </div>
+
+           
+
 
           </div>
         </main>
@@ -176,24 +201,7 @@ export default function Home() {
                 <h3>Mande um menssagem</h3>
 
                 <div className="flex flex-col">
-                  <form action="" className="flex flex-col w-full mt-10 mb-10">
-                    <input type="Nome" placeholder="Digite seu nome" className="mb-10  rounded-md bg-zinc-700 text-sm p-[1rem]"/>
-                    <input type="phone" placeholder="informe seu numero" className="mb-10  rounded-md bg-zinc-700 text-sm p-[1rem]"/>
-                  
-                    <input type="phone" placeholder="informe seu e-mail" className="mb-10  rounded-md bg-zinc-700 text-sm p-[1rem]" />
-                  <div className="flex justify-center items-center">
-                    <button 
-                      type="submit" 
-                      className="
-                      bg-green-600 
-                      w-[80%] 
-                      rounded-md 
-                      hover:bg-green-700"
-                      >Enviar dados
-                    </button>
-                  </div>
-
-                  </form>
+                  <Forms />
                 </div>
               </div>
                 
@@ -231,7 +239,7 @@ export default function Home() {
                 </div>
                  
               </div>
-            </main>
+        </main>
        
       </section>
      
