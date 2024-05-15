@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
                 
                 <p className="sm:mt-0 mt-5 text-1xl font-bold text-white">Precisa de uma solução customizada para sua Empresa?</p>
-                <a href="#" className="flex item-center justify-center gap-2 mt-5  p-5  bg-zinc-700 w-[50%]">
+                <a href="#" className="flex item-center justify-center gap-2 mt-5  p-5  bg-zinc-700 sm:w-[35%] rounded-md">
                   <p className="text-green-700 font-bold">Dashboard </p>
                   <p className="text-white font-medium"> App</p> 
                 </a>
@@ -104,8 +104,8 @@ export default function Home() {
                 </div>
                 
                 <p className="sm:mt-0 mt-5 text-1xl font-bold text-white flex items-center gap-2 ">App's cross-plataform... <span><FaApple className="w-[20px] h-[20px]"/></span> | <span> <FaAndroid className="w-[20px] h-[20px]"/></span> </p>
-                <a href="#" className="flex item-center justify-center gap-1  mt-5  p-5  bg-zinc-700 w-[50%] rounded-md">
-                  <p className="text-green-700 font-normal">Dashboard </p>
+                <a href="#" className="flex item-center justify-center gap-1  mt-5  p-5  bg-zinc-700 sm:w-[50%] rounded-md">
+                  <p className="text-green-700 font-bold ">Dashboard </p>
                   <p className="text-white font-bold"> App</p> 
                 </a>
               </div> 
