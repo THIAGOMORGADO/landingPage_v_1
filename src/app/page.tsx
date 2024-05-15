@@ -80,7 +80,7 @@ export default function Home() {
            
 
             <div className="flex sm:gap-20 sm:flex-row-reverse flex-col mb-10 items-center">
-              <Image src={App}  alt="" className="rounded-md sm:w-[40%] sm:h-[20%]"/>
+              <Image src={App}  alt="" className="rounded-md sm:w-[50%] sm:h-[20%]"/>
             
               <div className="">
               <h1 className="sm:text-2xl sm:font-bold text-white mt-5"><span className="text-green-700">Aplicativos </span> iOS/Android</h1>
@@ -103,10 +103,10 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <p className="sm:mt-0 mt-5 text-1xl font-bold text-white flex items-center gap-2">App's cross-plataform... <span><FaApple className="w-[20px] h-[20px]"/></span> | <span> <FaAndroid className="w-[20px] h-[20px]"/></span> </p>
-                <a href="#" className="flex item-center justify-center gap-2  mt-5 border-green-500  p-5  bg-zinc-700 w-[40%] rounded-md">
-                  <p className="text-green-700 font-bold">Dashboard </p>
-                  <p className="text-white font-medium"> App</p> 
+                <p className="sm:mt-0 mt-5 text-1xl font-bold text-white flex items-center gap-2 ">App's cross-plataform... <span><FaApple className="w-[20px] h-[20px]"/></span> | <span> <FaAndroid className="w-[20px] h-[20px]"/></span> </p>
+                <a href="#" className="flex item-center justify-center gap-1  mt-5  p-5  bg-zinc-700 w-[50%] rounded-md">
+                  <p className="text-green-700 font-normal">Dashboard </p>
+                  <p className="text-white font-bold"> App</p> 
                 </a>
               </div> 
             </div>
