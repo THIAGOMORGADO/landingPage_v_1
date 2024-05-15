@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
                 
                 <p className="sm:mt-0 mt-5 text-1xl font-bold text-white">Precisa de uma solução customizada para sua Empresa?</p>
-                <a href="#" className="flex item-center justify-center gap-2  mt-5 border-green-500  p-5  bg-zinc-700 w-[40%] rounded-md">
+                <a href="#" className="flex item-center justify-center gap-2 mt-5  p-5  bg-zinc-700 w-[50%]">
                   <p className="text-green-700 font-bold">Dashboard </p>
                   <p className="text-white font-medium"> App</p> 
                 </a>
